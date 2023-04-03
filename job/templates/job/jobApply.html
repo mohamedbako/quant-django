@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jobList.css' %}">
+</head>
+<body>
+    
+<section>
+    <div class="row container mx-auto p-sm-5 m-5 d-flex justify-content-center">
+        <h1 class="text-center py-5">Apply Form</h1>
+        <div class="col-sm-7">
+            <form>
+                <!-- <div class="applyTitle">
+                    <h4>Step 1</h4>
+                </div> -->
+                 <div class="row  pt-2">
+                  <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form6Example1">First name</label>
+                        <input type="text" id="form6Example1"  class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form6Example2">Last name</label>
+                        <input type="text" id="form6Example2" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+ 
+                 <div class="form-outline ">
+                    <div class="row">
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example5">Email</label>
+                            <input type="email" id="form6Example5" class="form-control" />
+                        </div>
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Age</label>
+                            <input type="number" id="form6Example6" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="form-outline ">
+                    <div class="row">
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Sex</label>
+                             <select class="form-select custom-select-style" aria-label="Default select example">
+                              <option value="1">Male</option>
+                              <option value="2">Female</option>
+                            </select>                      
+                            </div>
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Status</label>
+                            <select class="form-select custom-select-style" aria-label="Default select example">
+                              <option value="1">Single</option>
+                              <option value="2">Married</option>
+                              <option value="3">Not to answer</option>
+                            </select>                   
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="form-outline ">
+                    <div class="row">
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Phone</label>
+                            <input type="number" id="form6Example6" class="form-control" />
+                        </div>
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Current Location<span class="fs-6 fw-lighter"> <em>(Country, City)</em></label>
+                            <input type="text" id="form6Example6" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="pb-5"></div>
+                <div class="applyTitle">
+                    <h4>Step 2</h4>
+                </div>
+
+                <div class="form-outline ">
+                    <div class="row">
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Title *</label>
+                            <input type="text" id="form6Example6" class="form-control" />
+                        </div>
+                        <div class="col-sm-6 gy-4">
+                            <label class="form-label" for="form6Example6">Years Of Experience *</label>
+                            <select class="form-select custom-select-style" aria-label="Default select example">
+                                <option value="1">Fresh </option>
+                                <option value="2">1 - 2</option>
+                                <option value="3">2 - 3</option>
+                                <option value="3">4 - 5</option>
+                                <option value="3">5 - More</option>
+                              </select>                        
+                            </div>
+                    </div>
+                </div> -->
+
+<!--  
+
+                <div class="pb-5"></div>
+                <div class="applyTitle">
+                    <h4>Step 3</h4>
+                </div> -->
+
+                <!-- <div class="form-check pt-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      I have work experience 😎
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        I don't have work experience yet 🤭
+                    </label>
+                  </div>
+ -->
+
+
+
+                <!-- Pdf input -->
+                <div class="form-outline ">
+                    <label class="form-label pt-4" for="customFile">CV <span class="fs-6 fw-lighter"> <em>(Pdf only)</em> </span></label>
+                    <input type="file" class="form-control" id="customFile" />
+                </div>
+                <div class="form-outline ">
+                    <label class="form-label pt-4" for="customFile">LinkedIn Profile</label>
+                    <input type="url" class="form-control" id="customFile" />
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline ">
+                    <label class="form-label pt-4" for="form6Example7">Cover</label>
+                    <textarea class="form-control " id="form6Example7" maxlength="350" rows="4"></textarea>
+                </div>
+            
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block my-5">Send</button>
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Well done! 🎉</h4>
+                    <p>We will get back to you as soon as possible, dear friend 😁🏃‍♂️.</p>
+                </div>
+              </form>
+        </div>
+ 
+    </div>
+</section>
+
+</body>
+</html>
