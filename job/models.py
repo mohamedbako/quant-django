@@ -6,6 +6,11 @@ JOBTYPE = (
     ('Part Time', 'Part Time'),
 )
 
+def imageUpload(instance, filename):
+    imagename , extension = filename.split(".")
+    return "postImages/%s.%s"%(instance.id, extension) 
+
+
 # Create your models here.
 class Job(models.Model):
     title = models.CharField(max_length=100)
@@ -17,6 +22,7 @@ class Job(models.Model):
     salary = models.IntegerField(default=0)
     experience = models.IntegerField(default=0)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=imageUpload) #this fun will create a new folder for images
 
     def __str__(self):
         return self.title
