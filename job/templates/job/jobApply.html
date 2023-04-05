@@ -1,10 +1,13 @@
-{% extends 'bace.html' %}
+{% extends 'base.html' %}
 
 {% block body %}
-    
+
+
+
 <section>
     <div class="row container mx-auto p-sm-5 m-5 d-flex justify-content-center">
-        <h1 class="text-center py-5">Apply Form</h1>
+        <h1 class="text-center py-5">Apply Form / {{job}}</h1>
+        <p class="text-center">Please complete the form below to apply for a position with us. 🥰</p>
         <div class="col-sm-7">
             <form>
                 <!-- <div class="applyTitle">
@@ -147,4 +150,6 @@
  
     </div>
 </section>
-  {% endblock body %}
+
+
+{% endblock body %}

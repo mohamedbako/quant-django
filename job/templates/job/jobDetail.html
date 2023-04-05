@@ -1,15 +1,32 @@
-{% extends 'bace.html' %}
+{% extends 'base.html' %}
+
+
+{% block jumbotron %}
+
+<!-- Jumbotron -->
+<section>
+  <div class="jumbotron p-5 text-center bg-image rounded-3">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="titlteContactUs">
+        <h1 class="fw-bold">Welcome to your home 🤗</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Jumbotron -->
+
+{% endblock jumbotron %}
+
 
 {% block body %}
     <section class="site-section">
         <div class="container">
-          <h1 class="py-5">Software Developer</h1>
+          <h1 class="py-5">{{job}}</h1>
           <div class="row">
             <div class="col-lg-8">
               <div class="mb-5">
                  <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left mr-3"></span>Job Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus.</p>
-                <p>Velit unde aliquam et voluptas reiciendis non sapiente labore, deleniti asperiores blanditiis nihil quia officiis dolor vero iste dolore vel molestiae saepe. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
+                <p>{{job.description}}</p>
               </div>
               <div class="mb-5">
                 <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-rocket mr-3"></span>Responsibilities</h3>
@@ -47,7 +64,7 @@
               <div class="row">
    
                 <div class="col">
-                  <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                  <a href="{% url 'jobs:jobApply' job.slug %}" class="btn btn-block btn-primary btn-md">Apply Now</a>
                 </div>
               </div>
             </div>

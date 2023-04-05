@@ -1,0 +1,47 @@
+/* .Title h2{
+    padding: 80px;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(200, 92, 92);
+    color: white;
+  } */
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+ 
+
+.jumbotron{
+  height: 300px;
+  background-image: radial-gradient(#474bff 2.5px, transparent 2.5px), radial-gradient(#474bff 2.5px, transparent 2.5px);
+  background-position: 0 0, 28.5px 28.5px;
+  background-color: white;
+  background-size: 57px 57px;
+ }
+.titlteContactUs{
+  background-color: white;
+}
+
+
+.formContactUs{
+  width: 75%;
+  background-color: lightblue;
+}
+
+@media (max-width: 576px) {
+  .col-sm-4{
+    display: none;
+  }
+  .formContactUs{
+    width: 90%;
+  }
+  .jumbotron{
+    height: 150px
+  }
+}
