@@ -28,16 +28,14 @@ def jobApply(request, slug):
 
     if request.method =='POST':
         form = ApplyForm(request.POST, request.FILES)
-    if form.is_valid():
-            myForm = form.save(commit=False)
-            myForm.job = jobApply
-            myForm.save()
-    else:
-        form = ApplyForm()
+        if form.is_valid():
+                myForm = form.save(commit=False)
+                myForm.job = jobApply
+                myForm.save()
+        else:
+            form = ApplyForm()
 
-
-
-    context = {'job' : jobApply, 'form' : form}
+    context = {'job' : jobApply}
     return render(request, 'job/jobApply.html', context)
 
  
