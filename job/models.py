@@ -46,3 +46,21 @@ class Category(models.Model):
     def __str__(self):
         return self.name
     
+
+
+class ApplyReq(models.Model):
+    job = models.ForeignKey(Job, verbose_name=("applyJob"), on_delete=models.CASCADE)
+    firstName = models.CharField(max_length=50)
+    lastName = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    age = models.IntegerField(default=0)
+    phone = models.IntegerField(default=0)
+    location = models.CharField(max_length=100)
+    cv = models.FileField(upload_to='apply/')
+    linkedIn = models.URLField()
+    cover = models.CharField(max_length=350)
+    applied_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.firstName
+    
