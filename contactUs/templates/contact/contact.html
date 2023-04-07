@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+
+{% block jumbotron %}
+
+<!-- Jumbotron -->
+<section>
+  <div class="jumbotron p-5 text-center bg-image rounded-3">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="titlteContactUs">
+        <h1 class="fw-bold">Welcome to your home 🤗</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Jumbotron -->
+
+{% endblock jumbotron %}
+
+
+{% block body %}
+
+<section>
+    <div class="formContactUs row container mx-auto p-sm-5 m-5">
+        <div class="col-sm-7 px-sm-5">
+            {% if subject %}
+            <div>
+              <h2>Thank {{subject}}!</h2>
+              <p>We received your email and will respond shortly..🥰</p>
+            </div>
+            {% else %} 
+            <div>
+              <h1 class="fw-bold py-3 text-white">Lorem, ipsum.</h1>
+            </div>             
+            <form method = "POST">
+              {% csrf_token %}
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4 pt-2">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" name= "subject" id="subject"  class="form-control" />
+                      <label class="form-label"  for="form6Example1">Name</label>
+                    </div>
+                  </div>
+                </div>
+              
+              
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" name= "email" id="email" class="form-control" />
+                  <label class="form-label"  for="form6Example5">Email</label>
+                </div>
+              
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                  <textarea class="form-control" name= "message" id="message" rows="4"></textarea>
+                  <label class="form-label"  for="form6Example7">Additional information</label>
+                </div>
+            
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+              </form>
+            </div>
+
+        <div class="col-sm-4">
+            <div class="d-flex pt-5 pb-3">
+                <img src="img/Path 2.svg" alt="" >
+                <div class="px-sm-4 w-100">
+                    <h5 class="fw-bold">Address</h5>
+                    <p>{{myInfo.place}}</p>
+                </div>
+            </div>
+            <div class="d-flex py-3">
+                <img src="img/Path 2.svg" alt="" >
+                <div class="px-sm-4 w-100">
+                    <h5 class="fw-bold">Phone Number</h5>
+                    <p>{{myInfo.phone}}</p>
+                </div>
+            </div>
+            <div class="d-flex py-3">
+                <img src="img/Path 2.svg" alt="" >
+                <div class="px-sm-4 w-100">
+                    <h5 class="fw-bold">Email Address</h5>
+                    <p>{{myInfo.email}}</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endblock body %}
