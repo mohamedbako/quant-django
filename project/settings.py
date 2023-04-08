@@ -43,6 +43,7 @@ INSTALLED_APPS = [
      # My Apps
     'job',
     'contactUs',
+    'main',
 ]
 
 MIDDLEWARE = [
