@@ -5,5 +5,5 @@ from . import views
 app_name = 'contactUs' # name of app
 
 urlpatterns = [
-    path('' , views.sendMessage),
+    path('' , views.sendMessage, name="sendMessage"),
 ]

@@ -5,7 +5,7 @@ from . import views
 app_name = 'job' # name of app
 
 urlpatterns = [
-    path('' , views.jobList),
+    path('' , views.jobList, name="jobList"),
     path('<str:slug>', views.jobDetail, name='jobDetail'),
     path('Applyjob/<str:slug>/', views.jobApply,name='jobApply'),
 ]

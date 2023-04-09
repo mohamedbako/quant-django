@@ -12,7 +12,9 @@
 [data-theme="dark"] {
  
 } */
-
+html {
+    scroll-behavior: smooth;
+}
  
 
 h1, h2, h3, h5 {

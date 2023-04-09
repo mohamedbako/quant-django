@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from ckeditor.fields import RichTextField
 
 JOBTYPE = (
     ('Full Time', 'Full Time'),
@@ -16,17 +17,15 @@ class Job(models.Model):
     title = models.CharField(max_length=100)
     #location
     job_type = models.CharField(max_length=20, choices= JOBTYPE)
-    description = models.TextField(max_length=1000)
-    JobResponsibilities = models.TextField(max_length=1000)
-    JobRequirements = models.TextField(max_length=1000)
+    description = RichTextField(max_length=1000)
+    JobResponsibilities = RichTextField(max_length=1000)
+    JobRequirements = RichTextField(max_length=1000)
     published_at = models.DateTimeField(auto_now=True)
     vacancy = models.IntegerField(default=1)
     salary = models.IntegerField(default=0)
-    experience = models.IntegerField(default=0)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to=imageUpload) #this fun will create a new folder for images
 
-    slug = models.SlugField(blank=True, null= True)
+    slug = models.SlugField(blank=True, null= True, editable=False, unique=True)
 
 
     def save(self,*args, **kwargs):

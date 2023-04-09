@@ -7,7 +7,7 @@
   <div class="jumbotron p-5 text-center bg-image rounded-3">
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="titlteContactUs">
-        <h1 class="fw-bold">Welcome to your home 🤗</h1>
+        <h1 class="fw-bold">Grow Your Career with Us 🥰</h1>
       </div>
     </div>
   </div>
@@ -17,6 +17,20 @@
 {% endblock jumbotron %}
 
 {% block body %}
+
+{% if jobs.count == 0 %}
+<div class="container text-center">
+      <h2 class="section-title p-5">
+        We are not hiring right now.
+      </h2>
+      <p class = "mb-5">Need information ?</p>
+      <a href="{% url 'contactUs:sendMessage' %}">
+        <button href="" class="btn-home btn btn-outline-success mb-5">Contact Us</button>
+      </a>
+  </div>
+
+  {% else %}
+
 
 <section class="site-section">
     <div class="container">
@@ -55,5 +69,6 @@
     </div>
   </section>
 
+  {% endif %}
 
 {% endblock body %}

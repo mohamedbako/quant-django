@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 {% block body %}
     <!-- sc1 -->
-    <section class="sc1 container-fluid text-center pt-5 ">
+    <section class="sc1 container-fluid text-center pt-5">
       <div class="">
         <h2>Quant</h2>
         <h1 class="display-1 fw-semibold">YOUR DATA, <span>WEALTH</span></h1>
         <h4>Where Data Meets Scince</h4>
       </div>
       <div class="p-3">
-        <button class="btn-home btn btn-outline-success">Contact Us</button>
+        <a href="{% url 'contactUs:sendMessage' %}">
+          <button href="" class="btn-home btn btn-outline-success">Contact Us</button>
+        </a>
       </div>
       <div class="pt-sm-5">
         <div>
@@ -74,7 +76,7 @@
     </section>
 
 
-    <section class="sc3 container pt-5 pb-5">
+    <section class="sc3 container pt-5 pb-5" id = "1">
       <div class="pb-5">
         <h3 class="fw-bold display-6">Features</h3>
       </div>
@@ -164,7 +166,9 @@
             <div class="card-body m-3 text-center">
               <h5 class="display-6 fw-bold">Let's talk</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button class="btn-home btn btn-outline-primary">Contact Us</button>
+              <a href="{% url 'contactUs:sendMessage' %}">
+                <button href="" class="btn-home btn btn-outline-success">Contact Us</button>
+              </a>
             </div>
           </div>
         </div>
@@ -173,4 +177,4 @@
 
 
 
-    {% endblock body %}
+{% endblock body %}

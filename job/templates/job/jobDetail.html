@@ -24,40 +24,29 @@
           <h1 class="py-5">{{job}}</h1>
           <div class="row">
             <div class="col-lg-8">
-              <div class="mb-5">
-                 <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left mr-3"></span>Job Description</h3>
-                <p>{{job.description}}</p>
+              <div class="mb-5 px-2">
+                 <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left"></span>Job Description</h3>
+                <p>{{job.description|safe}}</p>
               </div>
-              <div class="mb-5">
-                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-rocket mr-3"></span>Responsibilities</h3>
+              <div class="mb-5 px-2">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-rocket"></span>Responsibilities</h3>
                 <ul class="list-unstyled m-0 p-0">
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Velit unde aliquam et voluptas reiciendis n Velit unde aliquam et voluptas reiciendis non sapiente labore</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia officiis dolor</span></li>
+                  <p>{{job.JobResponsibilities|safe}}</p>
                 </ul>
               </div>
   
-              <div class="mb-5">
-                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-book mr-3"></span>Education + Experience</h3>
+              <div class="mb-5 px-2">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-book"></span>Requirements</h3>
                 <ul class="list-unstyled m-0 p-0">
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Velit unde aliquam et voluptas reiciendis non sapiente labore</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia officiis dolor</span></li>
+                  <p>{{job.JobRequirements|safe}}</p>
+
                 </ul>
               </div>
   
-              <div class="mb-5">
-                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-turned_in mr-3"></span>Other Benifits</h3>
+              <div class="mb-5 px-2">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-turned_in"></span>Vacancy</h3>
                 <ul class="list-unstyled m-0 p-0">
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Velit unde aliquam et voluptas reiciendis non sapiente labore</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-                  <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia officiis dolor</span></li>
+                  <p>{{job.vacancy}}</p>
                 </ul>
               </div>
   
