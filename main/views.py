@@ -10,3 +10,6 @@ def main(request):
 
 def error_404(requset, exception):
     return render(requset, 'main/404.html', {})
+
+def error_500(requset):
+    return render(requset, 'main/500.html', {})

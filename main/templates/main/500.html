@@ -1,1 +1,13 @@
-500 HERE
+{% extends 'base.html' %}
+{% block body %}
+    <section class="continer text-center">
+        <div style = "padding : 250px">
+            {% comment %} <img src="{% static 'svg/Logo.svg' %}" alt=""> {% endcomment %}
+            <h1 class="display-6 fw-bold">Oops! Something went wrong.</h1>
+            <p>We're sorry, but an unexpected error occurred while processing your request. Our technical team has been notified of the issue and will work to resolve it as soon as possible.</p>
+            <p>If you have any questions or need further assistance, please contact us at</p>
+            <p>info@quant.sa</p>
+            
+        </div>
+    </section>
+{% endblock body %}
